@@ -10,6 +10,7 @@ services:
         working_dir: /app
         command: >
             sh -c "
+                npm i -g @nestjs/cli &&
                 npm install &&
                 npm run start
             "
@@ -34,3 +35,15 @@ services:
             - 8080:80
         volumes:
             - ./nginx/:/etc/nginx/conf.d/
+
+    mysql:
+        image: mysql:5.7
+        container_name: mysql
+        environment:
+            MYSQL_DATABASE: database
+            MYSQL_USER: user
+            MYSQL_PASSWORD: password
+            MYSQL_ROOT_PASSWORD: root
+            TZ: Asia/Tokyo
+        volumes:
+            - ./mysql/my.cnf:/etc/mysql/my.cnf
