@@ -12,5 +12,5 @@ export class Todo {
   body: string;
 
   @Column({ default: false })
-  isActive: boolean;
+  isStatus: boolean;
 }
