@@ -32,3 +32,7 @@ nest:
 .PHONY: next
 next:
 	$(dc) exec next /bin/sh
+
+.PHONY: mysql
+mysql:
+	$(dc) exec mysql /bin/sh
