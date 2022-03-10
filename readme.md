@@ -2,6 +2,24 @@
 next + nest + todo
 
 # 2022/03/10
+graphqlをインストールしデータ取得まで実装した。
+
+```js
+# Write your query or mutation here
+query {
+  todos {
+    id
+  }
+}
+```
+
+```json
+{
+  "data": {
+    "todos": []
+  }
+}
+```
 
 # 2022/03/09
 todo の Entity を作成し起動時に生成されるようにした。
