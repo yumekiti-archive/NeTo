@@ -1,0 +1,14 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Todo {
+  id: Float!
+  title: String!
+  body: String!
+  isStatus: Boolean!
+}
+
+type Query {
+  todos: [Todo!]!
+}
