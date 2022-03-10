@@ -1,6 +1,8 @@
 # NeTo
 next + nest + todo
 
+# 2022/03/10
+
 # 2022/03/09
 todo の Entity を作成し起動時に生成されるようにした。
 
