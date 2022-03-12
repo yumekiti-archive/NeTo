@@ -1,7 +1,10 @@
 # NeTo
 next + nest + todo
 
-# 2022/03/10
+# 2022/03/12
+
+
+# 2022/03/11
 graphqlをインストールしデータ取得まで実装した。
 
 ```js
@@ -20,6 +23,9 @@ query {
   }
 }
 ```
+
+# 2022/03/10
+todo の module resolver service を作成した
 
 # 2022/03/09
 todo の Entity を作成し起動時に生成されるようにした。
