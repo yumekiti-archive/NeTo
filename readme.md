@@ -3,7 +3,7 @@ next + nest + todo
 
 # 2022/03/15
 todoを追加できるようにした
-```
+```js
 # Write your query or mutation here
 mutation {
   addTodo(TodoData: {
@@ -21,7 +21,7 @@ mutation {
 }
 ```
 
-```
+```json
 {
   "data": {
     "addTodo": {
