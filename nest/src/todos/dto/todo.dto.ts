@@ -17,9 +17,9 @@ export class NewTodo {
 
 // # Write your query or mutation here
 // mutation {
-//   addNewTodo(newTodoData: {
-//     title: "牛乳を買ってくる",
-//     body: "",
+//   addTodo(newTodoData: {
+//     title: "hoge",
+//     body: "piyo fuga",
 //     isStatus: false,
 //   }) {
 //     id

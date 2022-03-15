@@ -27,4 +27,5 @@ type Mutation {
 input NewTodo {
   title: String!
   body: String!
+  isStatus: Boolean!
 }
