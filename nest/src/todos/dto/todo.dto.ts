@@ -17,7 +17,7 @@ export class NewTodo {
 
 // # Write your query or mutation here
 // mutation {
-//   addTodo(newTodoData: {
+//   addTodo(TodoData: {
 //     title: "hoge",
 //     body: "piyo fuga",
 //     isStatus: false,

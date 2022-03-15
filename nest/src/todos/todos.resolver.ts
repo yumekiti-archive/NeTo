@@ -16,9 +16,9 @@ export class TodosResolver {
   
   @Mutation(() => Todo)
   public async addTodo(
-    @Args('newTodoData') newTodoData: NewTodo,
+    @Args('TodoData') TodoData: NewTodo,
   ): Promise<Todo> {
-    return await this.todosService.addTodo(newTodoData).catch((err) => {
+    return await this.todosService.addTodo(TodoData).catch((err) => {
       throw err;
     });
   }
