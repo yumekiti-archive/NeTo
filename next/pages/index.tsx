@@ -1,13 +1,20 @@
 import type { NextPage } from 'next'
-import { Input, Flex, Button } from '@chakra-ui/react'
+import { SimpleGrid, Container, Input, Flex, Button } from '@chakra-ui/react'
+import List from '../components/List';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Flex m={10} justify="center" align='center'>
-        <Input placeholder='todo' size='lg' />
-        <Button colorScheme='blue'>Add</Button>
-      </Flex>
+      <Container p={10}>
+        <SimpleGrid columns={1} spacing={10}>
+          <Flex justify="center" align='center'>
+            <Input placeholder='todo' size='lg' />
+            <Button colorScheme='blue'>Add</Button>
+          </Flex>
+
+          <List />
+        </SimpleGrid>
+      </Container>
     </>
   )
 }
