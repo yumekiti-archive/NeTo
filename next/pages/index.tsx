@@ -1,17 +1,14 @@
 import type { NextPage } from 'next'
-import { SimpleGrid, Container, Input, Flex, Button } from '@chakra-ui/react'
+import { SimpleGrid, Container } from '@chakra-ui/react'
 import List from '../components/List';
+import Form from '../components/Form';
 
 const Home: NextPage = () => {
   return (
     <>
       <Container p={10}>
         <SimpleGrid columns={1} spacing={10}>
-          <Flex justify="center" align='center'>
-            <Input placeholder='todo' size='lg' />
-            <Button colorScheme='blue'>Add</Button>
-          </Flex>
-
+          <Form />
           <List />
         </SimpleGrid>
       </Container>
