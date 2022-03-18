@@ -1,10 +1,20 @@
 import { Stack } from '@chakra-ui/react'
 import Item from './Item';
 
-export default function List(){
+type Props = {
+  todos: any
+};
+
+export default function List({ todos }: Props){
   return (
     <Stack spacing={3}>
-      <Item text="This is the Box" />
+      {
+        todos.map((todo: any, index: Number) => {
+          return (
+            <Item text={todo.title} />
+          )
+        })
+      }
     </Stack>
   );
 }
