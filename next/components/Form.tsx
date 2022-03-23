@@ -2,7 +2,12 @@ import { Flex, Button, Input } from '@chakra-ui/react'
 import { gql, useMutation } from '@apollo/client';
 import { useState } from 'react';
 
-export default function Form(){
+type Props = {
+  todos: any;
+  setTodo: Function;
+};
+
+export default function Form({ todos, setTodo }: Props){
   const [title, setTitle]  = useState("");
   
   const [addTodo, { data, loading, error }] = useMutation(gql`
@@ -22,9 +27,9 @@ export default function Form(){
     }
   `);
 
-  if (loading) return <text>Loading...</text>;
+  if (loading) return <p>Loading...</p>;
   if (error) return (
-    <text>Error! ${error.message}</text>
+    <p>Error! ${error.message}</p>
   );
 
   return (
@@ -33,7 +38,9 @@ export default function Form(){
       <form
         onSubmit={e => {
           e.preventDefault();
-          addTodo();
+          addTodo().then((result) => {
+            setTodo([...todos, result.data.addTodo]);
+          });
           setTitle('');
         }}
       >
