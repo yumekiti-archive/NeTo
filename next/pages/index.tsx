@@ -9,6 +9,11 @@ const Home: NextPage = () => {
     query {
       todos {
         id
+        title
+        body
+        isStatus
+        createdAt
+        updatedAt
       }
     }
   `);
